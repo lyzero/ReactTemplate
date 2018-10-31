@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View, Button } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
-import { BlinkComponent } from '../AwesomeProject/Blink';
-import { ProfileScreen } from '../AwesomeProject/ProfileScreen';
-import { store } from '../AwesomeProject'
-import { addTodo } from './core/flux/actions'
+import { BlinkComponent } from './Blink';
+import { ProfileScreen } from './ProfileScreen';
+import { store } from '../'
+import { addTodo } from '../core/flux/actions'
 import { AddToDoList } from './AddToDoList'
 import { FetchExample } from './FetchExample'
 

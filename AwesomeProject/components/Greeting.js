@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { store } from '../AwesomeProject'
-import { Platform, StyleSheet, Text, View, Button } from 'react-native';
-import { connectWithStore } from './connectWithStore'
-import { addTodo } from './core/flux/actions'
+import { Text, View } from 'react-native';
+
 
 
 export class Greeting extends Component {

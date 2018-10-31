@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View, Button } from 'react-native';
-import { Greeting } from '../AwesomeProject/Greeting'
+import { Greeting } from './Greeting'
 
 export class ProfileScreen extends React.Component {
     static navigationOptions = {

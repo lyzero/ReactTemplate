@@ -3,7 +3,7 @@ import {
     connect,
     Provider,
 } from "react-redux";
-import {store} from "./"
+import {store} from "../../.."
 
 export function connectWithStore(mapStateToProps, component) {
     const ConnectedWrappedComponent = connect(mapStateToProps)(component);

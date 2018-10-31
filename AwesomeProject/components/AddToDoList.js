@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { store } from '../AwesomeProject'
-import { Platform, StyleSheet, Text, View, Button, ListView, FlatList } from 'react-native';
-import { connectWithStore } from './connectWithStore'
-import { addTodo } from './core/flux/actions'
+import { store } from '../'
+import { StyleSheet, Text, View, Button, FlatList } from 'react-native';
+import { connectWithStore } from '../core/flux/store/connectWithStore'
+import { addTodo } from '../core/flux/actions'
 
 const styles = StyleSheet.create({
     container: {
