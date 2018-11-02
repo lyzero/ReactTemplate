@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Button } from 'react-native';
+import React from 'react';
+import { Platform, View, Button } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import { BlinkComponent } from './Blink';
 import { ProfileScreen } from './ProfileScreen';
@@ -7,6 +7,7 @@ import { store } from '../'
 import { addTodo } from '../core/flux/actions'
 import { AddToDoList } from './AddToDoList'
 import { FetchExample } from './FetchExample'
+import { LandingPage } from './Home/LandingPage';
 
 
 const instructions = Platform.select({
@@ -53,6 +54,12 @@ class HomeScreen extends React.Component {
             navigate('FetchExampleComponent')
           }
         />
+        <Button
+          title="LandingPage"
+          onPress={() =>
+            navigate('LandingScreen')
+          }
+        />
       </View>
     );
   }
@@ -63,7 +70,8 @@ const App = createStackNavigator({
   Profile: { screen: ProfileScreen },
   Blink: { screen: BlinkComponent },
   AddToDoList: { screen: AddToDoList },
-  FetchExampleComponent: { screen: FetchExample }
+  FetchExampleComponent: { screen: FetchExample },
+  LandingScreen: { screen: LandingPage },
 });
 
 export default App;
