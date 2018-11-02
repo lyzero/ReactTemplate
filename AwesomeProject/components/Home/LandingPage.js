@@ -43,8 +43,8 @@ class LandingPageComponent extends Component {
                 flex: 1,
                 flexDirection: 'column',
             }}>
-                <View style={{ top: 20, marginLeft: 16, height: 50, marginRight: 16, borderColor: 'black', borderWidth: 2, borderRadius: 24, flexDirection: 'row' }}>
-                    <Image source={require('./HomeAssets/search.png')} style={{ marginLeft: 16, width: 40, height: 40, marginTop: 5, }} />
+                <View style={{ top: 20, marginLeft: 16, height: 50, marginRight: 16, backgroundColor: "white", borderColor: 'black', borderWidth: 2, borderRadius: 24, flexDirection: 'row' }}>
+                    <Image source={require('./HomeAssets/search.png')} style={{ marginLeft: 16, width: 40, height: 38, marginTop: 5, }} />
                     <TextInput
                         style={{ marginLeft: 16, height: 40 }}
                         onChangeText={(text) => { }}
