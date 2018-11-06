@@ -23,7 +23,6 @@ class HomeScreen extends React.Component {
   };
   render() {
     const { navigate } = this.props.navigation;
-    console.log("linyin");
     console.log(store.getState());
     store.dispatch(addTodo('Learn about actions'))
     console.log(store.getState());
@@ -57,7 +56,7 @@ class HomeScreen extends React.Component {
         <Button
           title="LandingPage"
           onPress={() =>
-            navigate('LandingScreen')
+            navigate('LandingScreen', { navigation: navigate })
           }
         />
       </View>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { store } from '../..'
-import { StyleSheet, Text, View, Button, FlatList, TextInput, Image } from 'react-native';
+import { StyleSheet, Text, View, Button, FlatList, TextInput, Image, TouchableHighlight } from 'react-native';
 import { connectWithStore } from '../../core/flux/store/connectWithStore';
 
 const styles = StyleSheet.create({
@@ -31,14 +31,19 @@ const styles = StyleSheet.create({
         fontSize: 18,
         height: 44,
     },
+    companions: {
+        width: 100,
+        height: 100,
+    }
 })
 
 
 class LandingPageComponent extends Component {
     render() {
         console.log("Render todos", this.props.todos)
+        const { navigation } = this.props;
+        const navigate = navigation.getParam('navigation');
         return (
-
             <View style={{
                 flex: 1,
                 flexDirection: 'column',
@@ -72,9 +77,23 @@ class LandingPageComponent extends Component {
                 <View style={{ top: 136, marginLeft: 16, height: 100, marginRight: 16 }}>
                     <Text style={{ fontWeight: 'bold' }}>Looking For Companian</Text>
                     <View style={{ flexDirection: 'row', top: 10, }}>
-                        <Image source={require('./HomeAssets/Companions/Girl1.jpg')} style={{ marginLeft: 16, width: 100, height: 100, marginTop: 5, }} />
-                        <Image source={require('./HomeAssets/Companions/Girl2.jpg')} style={{ marginLeft: 16, width: 100, height: 100, marginTop: 5, }} />
-                        <Image source={require('./HomeAssets/Companions/Girl3.jpg')} style={{ marginLeft: 16, width: 100, height: 100, marginTop: 5, }} />
+                        <TouchableHighlight style={{ marginLeft: 16 }} onPress={() =>
+                            console.log("On Press")
+                        }>
+                            <Image source={require('./HomeAssets/Companions/Girl1.jpg')} style={styles.companions} />
+                        </TouchableHighlight>
+
+                        <TouchableHighlight style={{ marginLeft: 16 }} onPress={() => {
+                            navigate('Profile')
+                        }}>
+                            <Image source={require('./HomeAssets/Companions/Girl2.jpg')} style={styles.companions} />
+                        </TouchableHighlight>
+
+                        <TouchableHighlight style={{ marginLeft: 16 }} onPress={() =>
+                            console.log("On Press")
+                        }>
+                            <Image source={require('./HomeAssets/Companions/Girl3.jpg')} style={styles.companions} />
+                        </TouchableHighlight>
                     </View>
                 </View>
             </View>
