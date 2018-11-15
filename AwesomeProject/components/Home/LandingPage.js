@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { store } from '../..'
 import { StyleSheet, Text, View, Button, FlatList, TextInput, Image, TouchableHighlight } from 'react-native';
 import { connectWithStore } from '../../core/flux/store/connectWithStore';
 

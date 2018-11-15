@@ -15,8 +15,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  [[FBSDKApplicationDelegate sharedInstance] application:application
-                           didFinishLaunchingWithOptions:launchOptions];
   NSURL *jsCodeLocation;
 
   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
@@ -32,8 +30,10 @@
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
+
+  [[FBSDKApplicationDelegate sharedInstance] application:application
+                           didFinishLaunchingWithOptions:launchOptions];
   return YES;
 }
-
 
 @end

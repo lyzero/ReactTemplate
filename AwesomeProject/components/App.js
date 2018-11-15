@@ -8,7 +8,7 @@ import { addTodo } from '../core/flux/actions'
 import { AddToDoList } from './AddToDoList'
 import { FetchExample } from './FetchExample'
 import { LandingPage } from './Home/LandingPage';
-
+import { WelcomePage } from './Login/WelcomePage';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -59,6 +59,12 @@ class HomeScreen extends React.Component {
             navigate('LandingScreen', { navigation: navigate })
           }
         />
+        <Button
+          title="WelcomePage"
+          onPress={() =>
+            navigate('WelcomeScreen', { navigation: navigate })
+          }
+        />
       </View>
     );
   }
@@ -71,6 +77,7 @@ const App = createStackNavigator({
   AddToDoList: { screen: AddToDoList },
   FetchExampleComponent: { screen: FetchExample },
   LandingScreen: { screen: LandingPage },
+  WelcomeScreen: { screen: WelcomePage },
 });
 
 export default App;
