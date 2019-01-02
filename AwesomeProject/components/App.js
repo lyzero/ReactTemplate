@@ -9,6 +9,7 @@ import { AddToDoList } from './AddToDoList'
 import { FetchExample } from './FetchExample'
 import { LandingPage } from './Home/LandingPage';
 import { WelcomePage } from './Login/WelcomePage';
+import { UserCreation } from './Login/UserCreation'
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -78,6 +79,7 @@ const App = createStackNavigator({
   FetchExampleComponent: { screen: FetchExample },
   LandingScreen: { screen: LandingPage },
   WelcomeScreen: { screen: WelcomePage },
+  UserCreationScreen: { screen: UserCreation }
 });
 
 export default App;
