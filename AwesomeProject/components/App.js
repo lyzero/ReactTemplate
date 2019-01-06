@@ -9,7 +9,8 @@ import { AddToDoList } from './AddToDoList'
 import { FetchExample } from './FetchExample'
 import { LandingPage } from './Home/LandingPage';
 import { WelcomePage } from './Login/WelcomePage';
-import { UserCreation } from './Login/UserCreation'
+import { UserCreation } from './Login/UserCreation';
+import { TripCreation } from './Trips/TripCreation';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -66,6 +67,12 @@ class HomeScreen extends React.Component {
             navigate('WelcomeScreen', { navigation: navigate })
           }
         />
+        <Button
+          title="TripCreation"
+          onPress={() =>
+            navigate('TripCreationScreen', { navigation: navigate })
+          }
+        />
       </View>
     );
   }
@@ -79,7 +86,8 @@ const App = createStackNavigator({
   FetchExampleComponent: { screen: FetchExample },
   LandingScreen: { screen: LandingPage },
   WelcomeScreen: { screen: WelcomePage },
-  UserCreationScreen: { screen: UserCreation }
+  UserCreationScreen: { screen: UserCreation },
+  TripCreationScreen: { screen: TripCreation }
 });
 
 export default App;
